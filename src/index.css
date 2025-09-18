@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Corporate Design System - Tech Eduvisor Company */
+
+@layer base {
+  :root {
+    /* Core Background & Foreground */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+    
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    
+    /* Popover System */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+    
+    /* Brand Color System */
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 85%;
+    --primary-dark: 210 100% 35%;
+    
+    /* Accent System - Orange like Synclovis */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 25 95% 75%;
+    --accent-dark: 25 95% 35%;
+    
+    /* Secondary System */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 27%;
+    
+    /* Neutral System */
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 13% 65%;
+    
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Border & Input System */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 50%;
+    
+    /* Design System Variables */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Gradient System */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(210 100% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(25 95% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(215 25% 27%) 0%, hsl(210 100% 25%) 50%, hsl(190 100% 35%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(0 0% 100%) 100%);
+    
+    /* Shadow System */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1), 0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1), 0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 27% / 0.1), 0 10px 10px -5px hsl(215 25% 27% / 0.04);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
+    --shadow-accent-glow: 0 0 40px hsl(var(--accent) / 0.2);
+    
+    /* Animation Variables */
+    --animation-fast: 0.15s ease-out;
+    --animation-normal: 0.3s ease-out;
+    --animation-slow: 0.5s ease-out;
+    --animation-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Core */
+    --background: 215 28% 17%;
+    --foreground: 0 0% 95%;
+    
+    /* Dark Mode Cards */
+    --card: 215 28% 20%;
+    --card-foreground: 0 0% 95%;
+    
+    /* Dark Mode Popover */
+    --popover: 215 28% 20%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Dark Mode Brand Colors */
+    --primary: 210 100% 60%;
+    --primary-foreground: 215 28% 17%;
+    --primary-light: 210 100% 75%;
+    --primary-dark: 210 100% 45%;
+    
+    /* Dark Mode Accent */
+    --accent: 25 95% 60%;
+    --accent-foreground: 215 28% 17%;
+    --accent-light: 25 95% 75%;
+    --accent-dark: 25 95% 45%;
+    
+    /* Dark Mode Secondary */
+    --secondary: 215 25% 25%;
+    --secondary-foreground: 0 0% 95%;
+    
+    /* Dark Mode Neutral */
+    --muted: 215 25% 25%;
+    --muted-foreground: 217 10% 65%;
+    
+    /* Dark Mode Status */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 71% 55%;
+    --success-foreground: 215 28% 17%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 215 28% 17%;
+    
+    /* Dark Mode Borders */
+    --border: 215 25% 25%;
+    --input: 215 25% 25%;
+    --ring: 210 100% 60%;
+    
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(210 100% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(25 95% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(215 28% 17%) 0%, hsl(210 100% 30%) 50%, hsl(190 100% 40%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 28% 20%) 0%, hsl(215 25% 25%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 25%) 0%, hsl(215 28% 20%) 100%);
+    
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 10px 10px -5px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-accent-glow: 0 0 40px hsl(var(--accent) / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography Scale */
+  .text-display {
+    @apply text-6xl font-bold leading-tight tracking-tight;
+  }
+  
+  .text-hero {
+    @apply text-5xl font-bold leading-tight tracking-tight;
+  }
+  
+  .text-heading-1 {
+    @apply text-4xl font-bold leading-tight tracking-tight;
+  }
+  
+  .text-heading-2 {
+    @apply text-3xl font-semibold leading-tight tracking-tight;
+  }
+  
+  .text-heading-3 {
+    @apply text-2xl font-semibold leading-snug;
+  }
+  
+  .text-heading-4 {
+    @apply text-xl font-semibold leading-snug;
+  }
+  
+  .text-body-large {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .text-body {
+    @apply text-base leading-relaxed;
+  }
+  
+  .text-body-small {
+    @apply text-sm leading-relaxed;
+  }
+}
+
+/* Animations & Transitions */
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in var(--animation-normal);
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up var(--animation-normal);
+  }
+  
+  .animate-scale-in {
+    animation: scale-in var(--animation-fast);
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right var(--animation-normal);
+  }
+  
+  .animate-bounce-in {
+    animation: bounce-in var(--animation-bounce);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+  
+  .hover-accent-glow {
+    @apply transition-all duration-300 hover:shadow-accent-glow;
+  }
+  
+  .glass-morphism {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    @apply bg-white/10 border border-white/20;
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-border {
+    position: relative;
+    background: var(--gradient-primary);
+    border-radius: var(--radius);
+    padding: 1px;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: hsl(var(--background));
+    border-radius: calc(var(--radius) - 1px);
+    z-index: -1;
+  }
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
