@@ -93,12 +93,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">FS</span>
-              </div>
-              <span className="text-xl font-bold">Tech Eduvisor</span>
-            </Link>
+           <Link to="/" className="flex items-center space-x-2 group">
+  <div className="flex items-center justify-center p-1">
+    <img
+      src="/logo.png"
+      alt="Tech Eduvisor Logo"
+      className="h-10 w-auto object-contain"
+    />
+  </div>
+  <span className="text-xl font-bold gradient-text group-hover:scale-105 transition-transform">
+    Tech Eduvisor
+  </span>
+</Link>
+
             <p className="text-background/80 mb-6 text-sm leading-relaxed">
               Your trusted partner for comprehensive digital transformation solutions. 
               We help businesses accelerate growth through AI, EdTech, marketing, and technology services.
@@ -116,7 +123,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>New York • Bangalore • London</span>
+                <span>Noida • India</span>
               </div>
             </div>
           </div>
